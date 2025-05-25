@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -42,3 +43,14 @@ Route::get('about-us/{name}/{email}', function($name,$email){
 });
 //or
 Route::view('contact-us/{name}/{id}','contactus');
+
+
+// Controller creation
+// Route::get('info',[StudentController::class,'info_index']);
+// Route::get('info2',[StudentController::class,'info_index2']);
+// or
+//controller group creation
+Route::controller(StudentController::class)->group(function(){
+    Route::get('info','info_index');
+    Route::get('info2','info_index2');
+});

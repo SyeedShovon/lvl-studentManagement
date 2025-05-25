@@ -16,4 +16,9 @@
             <h5>Reached i=5 !!</h5>
         @endif
     @endfor
+
+    @include('subviews.input',[
+        // 'view_name' => 'Syeed',
+        'view_name' => $name,
+    ])
 </div>
