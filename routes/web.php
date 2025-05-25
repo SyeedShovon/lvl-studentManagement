@@ -54,3 +54,9 @@ Route::controller(StudentController::class)->group(function(){
     Route::get('info','info_index');
     Route::get('info2','info_index2');
 });
+
+
+//sublayer of main layer page
+Route::get('infoView',function(){
+    return view('info');
+});
