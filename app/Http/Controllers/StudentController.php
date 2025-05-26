@@ -13,4 +13,9 @@ class StudentController extends Controller
     public function info_index2(){
         return "Hello from same controller another function!!";
     }
+
+    public function data_passing($id,$name){
+        // return $name."'s ID is - ".$id;
+        return view('dataPass',compact('id','name'));
+    }
 }

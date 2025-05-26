@@ -60,3 +60,6 @@ Route::controller(StudentController::class)->group(function(){
 Route::get('infoView',function(){
     return view('info');
 });
+
+//data passing
+Route::get('data-pass/{id}/{name}',[StudentController::class, 'data_passing']);
